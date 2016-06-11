@@ -1,0 +1,97 @@
+.Boton__Ir {
+    font-weight: bold;
+    padding: 0.5em 0.5em;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    width: 15em;
+    margin: 1em;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #ffffff;
+}
+.EquipoDeTrabajo
+	color #FFF
+	overflow hidden
+.EquipoDeTrabajo__Titulo
+	display: flex;
+	font-weight: lighter;
+	display: table;
+	font-size: 1.5em;
+	font-weight: 600
+	position: relative;
+	text-align: center;
+	padding: 0
+	overflow hidden
+	&:after
+		content ''
+		border-top 2px solid $azulProgress
+		display table-cell
+		top 50%
+		width 100%
+		position absolute
+	p
+		margin:0 1em;
+		position: relative;
+		z-index: 2;
+		background: $verdeProgress;
+		padding: 0 0.5em;
+		text-transform: uppercase
+.EquipoDeTrabajo__Flexible {
+    display: flex;
+}
+
+.EquipoDeTrabajo__Contenedor
+	background:$verdeProgress ;
+	position relative
+	z-index 1
+	padding 3em 0
+	flex: 8;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column
+	&:after
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: -10%;
+		left: -10%;
+		background: #2B7B3B;
+		z-index: -1;
+		transform: rotateX(0deg) rotateY(80deg) rotateZ(125deg);
+		transform-origin: bottom right;
+		perspective: 1px;
+		backface-visibility: hidden;
+		outline: 1px solid transparent;
+
+.EquipoDeTrabajo__imagen
+	display:none
+	max-width: 700px;
+	img
+		min-height: 330px;
+.EquipoDeTrabajo__contenido {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column
+}
+
+.EquipoDeTrabajo__Contenido
+	width: 85%;
+	font-weight: 200;
+	font-style: italic;
+	img.Equipo__Trabajo__img
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	p
+		margin-bottom 2em
+@media(min-width:760px){
+	.EquipoDeTrabajo__imagen {
+		display block
+		flex: 9;
+	}
+}

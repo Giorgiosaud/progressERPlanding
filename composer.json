@@ -1,0 +1,20 @@
+{
+	"name": "jorgelsaud/progress-erp",
+	"authors": [
+		{
+			"name": "Jorge Saud",
+			"email": "jorgelsaud@gmail.com"
+		}
+	],
+	"autoload":{
+		"psr-4":{
+			"jorgelsaud\\ProgressERP\\":"app/"
+		},
+		"files":[
+			"app/helpers.php"
+		]
+	},
+	"require": {
+		"jorgelsaud/bootstrap-nav-walker": "^2.4"
+	}
+}

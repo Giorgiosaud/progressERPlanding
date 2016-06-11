@@ -1,0 +1,45 @@
+.Calidad
+	display flex
+	flex-direction: column;
+	padding: 3em;
+	align-items center
+	justify-content center
+.Calidad__Contenido
+	display flex;
+	flex-direction column
+	align-items center
+	justify-content center
+	margin 3em 1em 0
+	max-width 450px
+.Calidad__Titulo
+	display: flex;
+	font-weight: lighter;
+	display: table;
+	font-size: 2em;
+	font-weight: 600
+	position: relative;
+	text-align: center;
+	padding: 0
+	overflow hidden
+	&:after
+		content ''
+		border-top 2px solid $azulProgress
+		display table-cell
+		top 50%
+		width 100%
+		position absolute
+	p
+		margin:0 2em;
+		position: relative;
+		z-index: 2;
+		background:#FFF;
+		padding: 0 0.5em;
+		text-transform: uppercase
+@media(min-width:640px){
+	.Calidad{
+		flex-direction: row;
+		justify-content: space-between;
+		}
+
+
+}

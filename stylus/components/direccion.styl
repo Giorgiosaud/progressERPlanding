@@ -1,0 +1,85 @@
+section.Direccion.container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin 2em auto;
+}
+.Direccion__texto {
+    flex: 1;
+    font-weight: 300;
+}
+.Direccion__mapa {
+	flex: 1;
+	#map{
+		min-height 200px;
+		width 100%
+		height 100%
+	}
+}
+.Direccion__texto__socials {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+.Direccion__texto__socials a{
+    color: white;
+    background: $azulProgress;
+    font-size: 1.5em;
+    margin: 0.5em;
+    display: flex;
+    padding: 0.5em;
+    align-items: center;
+    justify-content: center;
+}
+form.ContactForm {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    margin 1em auto
+}
+
+.FormHalf {
+	flex: 1;
+	&:nth-child(1){
+		text-align left
+	}
+	&:nth-child(2){
+		text-align right
+	}
+}
+
+.formField {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	select{
+		height 2.5em;
+	}
+	input, textarea,select{
+		width:95%;
+		border-radius: 10px;
+		border: none;
+		background: #f6f6f6;
+		padding: 0.5em;
+		margin-bottom:10px;
+	}
+	button{
+		border: transparent;
+		padding: 0.5em 1.5em;
+		background: $azulProgress;
+		color:white;
+		&[disabled]{
+		background:$grisImagenDestacada;
+		}
+	}
+}
+@media(min-width:768px){
+
+section.Direccion.container,form.ContactForm {
+	flex-direction:row
+}
+
+
+
+}

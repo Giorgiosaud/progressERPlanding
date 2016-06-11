@@ -1,0 +1,37 @@
+[
+    {
+        "name": "jorgelsaud/bootstrap-nav-walker",
+        "version": "v2.4",
+        "version_normalized": "2.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/giorgiosaud/bootstrapNavWalker.git",
+            "reference": "a63c9a301fd2bb11a4f6015490b2c5022588e3bf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/giorgiosaud/bootstrapNavWalker/zipball/a63c9a301fd2bb11a4f6015490b2c5022588e3bf",
+            "reference": "a63c9a301fd2bb11a4f6015490b2c5022588e3bf",
+            "shasum": ""
+        },
+        "time": "2016-06-02 03:14:15",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "jorgelsaud\\WordpressTools\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Giorgiosaud",
+                "email": "jorgelsaud@gmail.com"
+            }
+        ],
+        "description": "Bootstrap Nav Walker for wordpress"
+    }
+]

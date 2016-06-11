@@ -1,0 +1,59 @@
+	.ContenidoDestacado__descripcion{
+		margin 0 5em
+		z-index 2
+		img{
+			margin-right 0
+			}
+		p{
+			color:$azulProgress
+			font-weight 700
+			font-size 1.5em
+			display flex
+			align-items center
+			flex-direction: column;
+			}
+		a{
+			margin-left: 0;
+			color:$azulProgress
+			border: solid 2px $azulProgress;
+			padding: 0.1em 1em;
+			&:hover,&:focus{
+				text-decoration none
+				}
+				}
+		.circle{
+			display: none;
+			}
+	}
+	.ContenidoDestacado__fondo{
+		position: absolute
+		width: 100%
+		height: 80%
+		background: $grisImagenDestacada
+		top: 10%
+		z-index 1
+		}
+@media(min-width:830px){
+	.ContenidoDestacado__descripcion{
+		img{
+			margin-right 2em
+			}
+		p{
+			flex-direction row
+			}
+		a{
+			margin-left 2em;
+				}
+		.circle{
+			width: 30px;
+			height: 30px;
+			background: green;
+			border-radius: 50%;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			margin-left: 1em;
+			color: white;
+			}
+	}
+}
