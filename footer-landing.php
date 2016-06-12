@@ -1,9 +1,9 @@
-<footer>
+<footer style="background:url(<?= get_stylesheet_directory_uri()?>/app/img/footer.jpg);background-size:cover;">
 	<div class="container">
 		<section class="FooterLanding">
 			<div class="Logo">
 
-				<img src="<?= get_template_directory_uri()?>/app/img/logo.png" alt="Logo Progress ERP">
+				<img src="<?= get_template_directory_uri()?>/app/img/logoBlanco.png" alt="Logo Progress ERP">
 			</div>
 			<div class="Contactos">
 				<div class="Contactos__Titulo">
