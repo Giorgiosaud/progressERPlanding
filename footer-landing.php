@@ -23,8 +23,6 @@
 					<a href="https://www.linkedin.com/company/progress-erp"><span class="socicon socicon-linkedin"></span></a>	
 				</div>
 			</div>
-			<div class="Subscripcion">
-			</div>
 		</section>
 		<section class="Copyleft">
 			<p><?php the_field('copyleft','options')?></p>

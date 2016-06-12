@@ -185,7 +185,98 @@ if(!function_exists('sendEmail')){
 	$mensajeEmail.='</body></html>';
 	$headers = "From: " . strip_tags($email) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
-	$headers .= "CC: jorgelsaud@gmail.com\r\n";
+	//$headers .= "CC: jorgelsaud@gmail.com\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	mail($emailTo,$subject,$mensajeEmail,$headers);
+	die();
+
+	}
+}
+add_action('wp_ajax_requestDemo', 'requestDemo');
+add_action('wp_ajax_nopriv_requestDemo', 'requestDemo');
+if(!function_exists('requestDemo')){
+	function requestDemo(){
+	$url='https://www.google.com/recaptcha/api/siteverify';
+	$emailTo=get_field('email','option');
+	$secret='6LdtTyETAAAAAA3OwZ-CTIB1cP-LxEmmaiiONYAb';
+	$response=$_POST['data']['g-recaptcha-response'];
+	$nombre=$_POST['data']['nombre'];
+	$apellido=$_POST['data']['apellido'];
+	$email=$_POST['data']['email'];
+	$telefono=$_POST['data']['telefono'];
+	$empresa=$_POST['data']['empresa'];
+	$tamano=$_POST['data']['tamano'];
+	$mensaje=$_POST['data']['mensaje'];
+	if ($nombre === '') { 
+		header('Content-type: application/json', true, 401);
+		$respuesta = 'Ingrese Su Nombre';
+		$json=array('error'=>$respuesta);
+		echo json_encode($json);
+		die();
+	}
+	if ($apellido === '') { 
+		header('Content-type: application/json', true, 401);
+		$respuesta = 'Ingrese Su Nombre';
+		$json=array('error'=>$respuesta);
+		echo json_encode($json);
+		die();
+	}
+	if ($email === '') { 
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+		$respuesta = 'Ingrese Su Empresa';
+		echo $respuesta;
+		die();
+	}
+	if ($telefono === '') { 
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+		$respuesta = 'Ingrese Su Telefono';
+		echo $respuesta;
+		die();
+	}
+	if ($empresa === '') { 
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+		$respuesta = 'Ingrese Su Empresa';
+		echo $respuesta;
+		die();
+	}
+	if ($tamano === '') { 
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+		$respuesta = 'Ingrese el producto seleccionado';
+		echo $respuesta;
+		die();
+	}
+	if ($mensaje === '') { 
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+		$respuesta = 'Ingrese Su Mensaje';
+		echo $respuesta;
+		die();
+	}
+	$data=compact('secret','response');
+	// var_dump($data);
+	$options = array(
+		'http' => array(
+			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+			'method'  => 'POST',
+			'content' => http_build_query($data)
+			)
+		);
+	$context  = stream_context_create($options);
+	$result = file_get_contents($url, false, $context);
+	$jsonResult=json_decode($result);
+	if ($jsonResult->success === FALSE) { 
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+		$respuesta = 'Captcha Erroneo';
+		echo $respuesta;
+		die();
+	}
+	$subject="{$nombre} les Contacta desde la Web";
+	$mensajeEmail = '<html><body>';
+	$mensajeEmail.="<p><b>La persona de nombre:</b>{$nombre} {$apellido}</p><p><b>Empresa:</b>{$empresa} de tamano {$tamano}</p><p><b>telefono:</b>{$telefono}</p><p><b>email:</b><a href='mailto:{$email}'>{$email}</a></p><p><b>dejo este mensaje en la web:</b></p><p> {$mensaje}</p><p>refiriendose al producto{$producto}</p> ";
+	$mensajeEmail.='</body></html>';
+	$headers = "From: " . strip_tags($email) . "\r\n";
+	$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
+	//$headers .= "CC: jorgelsaud@gmail.com\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	mail($emailTo,$subject,$mensajeEmail,$headers);

@@ -16,7 +16,7 @@ class ImagenConDescripcion{
 		ob_start();?>
 		<section class="Calidad container" id="<?= $this->id?>">
 			<div class="Calidad__imagen">
-				<img src="<?=$this->imagen?>" alt="">
+				<img src="<?=$this->imagen?>" alt="" class="img-responsive">
 			</div>
 			<div class="Calidad__Contenido">
 				<div class="Calidad__Titulo">

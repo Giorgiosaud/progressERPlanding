@@ -68,7 +68,7 @@ class FormularioLanding{
 									<input type="text" name="empresa" placeholder="* Empresa" required>
 								</div>
 								<div class="formField">
-									<select name="producto" required>
+									<select name="tamano" required>
 										<option value="">¿De que tanaño es su Empresa?</option>
 										<option value="1-20">1-20 empleados</option>
 										<option value="21-60">21-60 empleados</option>
@@ -76,6 +76,9 @@ class FormularioLanding{
 										<option value="101-200">101-200 empleados</option>
 										<option value="+de 201">+de 201 empleados</option>
 									</select>
+								</div>
+								<div class="formField">
+									<textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="* Mensaje" required></textarea>
 								</div>
 								<div class="formField">
 									<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdtTyETAAAAAMWdzaftef7b6LKST4YMQAiuqiNF"></div>
@@ -91,7 +94,7 @@ class FormularioLanding{
 				</div>
 			</div>
 <?php
-echo ob_get_clean();
+											echo ob_get_clean();
 
 	}
 }

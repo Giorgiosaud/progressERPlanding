@@ -1,5 +1,4 @@
 .FormularioLanding{
-	display flex
 	min-height 80vh
 	background-color: transparent
 	background-repeat: no-repeat
@@ -102,6 +101,7 @@
 	display flex
 	align-items center
 	justify-content space-between
+	flex-direction row
 	color #000
 	.Contactos__Sociales a
 		color $azulProgress
@@ -177,6 +177,7 @@ section.CaracteristicasLanding {
 }
 section.SolicitarDemo {
     display: flex;
+    flex-direction row
     align-items: center;
     padding: 2em;
     justify-content: center;
@@ -206,9 +207,25 @@ section.SolicitarDemo {
 	}
 }
 @media(max-width:640px){
-	.ImagenyContenidoDestacado.container{
-	flex-direction column;
+	section.SolicitarDemo{
+		text-align center
 	}
+	.ImagenyContenidoDestacado.container,section.SolicitarDemo{
+		flex-direction column;
+	}
+
+	.FormularioLanding__Descripcion__Producto{
+		font-size 2em
+	}
+	.FooterLanding{
+	flex-direction column
+	}
+	footer{
+		.container{
+			margin 0
+			padding 0
+			}
+		}
 
 }
 

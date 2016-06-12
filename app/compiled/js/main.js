@@ -67,7 +67,7 @@ $('#enviarFormularioLanding').click(function(e){
 		window.location.href =vars.redirectDemo;
 		//});
 	}).fail(function(e) {
-		swal({title:"Listo!",text:"ha Sucedido un error "+e, type:"error"},function(){
+		swal({title:"Listo!",text:"ha Sucedido un error Revise La información Suministrada", type:"error"},function(){
 
 		});
 	})
