@@ -1,0 +1,214 @@
+.FormularioLanding{
+	display flex
+	min-height 80vh
+	background-color: transparent
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	padding-top 100px
+}
+.FormularioLanding__Descripcion {
+    flex: 3;
+    display: flex;
+    margin: 5em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.FormilarioLanding__Formulario {
+    flex: 2;
+    margin:0 5em;
+    background: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+}
+.FormularioLanding__Descripcion__Container {
+    background: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    padding: 2em;
+    font-size: 1.3em;
+}
+
+.FormularioLanding__Descripcion__Titulo {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.FormularioLanding__Descripcion__Producto {
+    font-size: 2.5em;
+    font-weight: bold;
+    position:relative;
+}
+.FormularioLanding__Descripcion__Producto:after{
+    content:'';
+    position:absolute;
+    width: 70%;
+    border-bottom: solid red 2px;
+    bottom:0;
+}
+.FormilarioLanding__Formulario__Titulo {
+    padding: 2em;
+    text-align: center;
+    font-weight: 700;
+    background: #0c5380;
+    font-size: 1.2em;
+}
+
+.FormilarioLanding__Formulario__Fields
+	padding: 2em 1em;
+	color #FFF;
+	text-align center
+	.formField
+		margin-bottom 1em;
+		select
+			color #000
+.LandingFormmensaje {
+    padding: 2em 0;
+}
+.botonCotizacion {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #0c5480 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #0c5480;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #0c5480;
+}
+.botonCotizacion:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0c5480), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #0c5480 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #0c5480 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #0c5480 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #0c5480 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #0c5480 5%, #7892c2 100%);
+	background-color:#0c5480;
+}
+.botonCotizacion:active {
+	position:relative;
+	top:1px;
+}
+.FormularioLanding__Descripcion__Caracteristicas {
+	font-size: 0.9em;
+	img{
+		margin-right 1em
+	}
+}
+.FooterLanding
+	display flex
+	align-items center
+	justify-content space-between
+	color #000
+	.Contactos__Sociales a
+		color $azulProgress
+.TitloDestacado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TituloDestacado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 4em;
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.ImagenyContenidoDestacado.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ImagenyContenidoDestacado__Contenido {
+    max-width: 450px;
+    }
+    .CaracteristicasLanding__Container {
+    flex-wrap: wrap;
+    flex-basis: 33%;
+    align-items: center;
+    justify-content: center;
+}
+
+.CaracteristicasLanding__Caracteristica {
+    flex-basis: calc(33% - 4em);
+    margin: 2em;
+    align-items: center;
+    text-align: center;
+}
+
+.CaracteristicasLanding__Caracteristica__icono {
+    background: white;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+section.CaracteristicasLanding {
+    background: gray;
+}
+
+.CaracteristicasLanding__Caracteristica__titulo {
+    font-size: 1.5em;
+    font-weight: 600;
+ }
+ .ClientesLanding__Container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.ClientesLanding__Cliente {
+    flex-basis: 20%;
+    margin-bottom: 1em;
+}
+section.SolicitarDemo {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    justify-content: center;
+}
+
+.SolicitarDemo__Titulo {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.SolicitarDemo__boton {
+    margin: 1em;
+}
+@media(max-width:1200px){
+
+.FormularioLanding__Descripcion__Producto:after{
+	width: 100%;
+}
+	.FlexFormSection{
+	flex-direction:row;
+	}
+}
+
+@media(max-width:992px){
+	.FlexFormSection{
+	flex-direction:column;
+	}
+}
+@media(max-width:640px){
+	.ImagenyContenidoDestacado.container{
+	flex-direction column;
+	}
+
+}
+

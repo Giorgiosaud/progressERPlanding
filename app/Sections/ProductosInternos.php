@@ -14,7 +14,7 @@ class ProductosInternos{
 	public function show(){
 		ob_start();?>
 		<section class="Productos">
-<? 
+<?php
 		if( have_rows('producto') ):
 			while ( have_rows('producto') ) : the_row();
 		$a=new ProductoInterno(get_sub_field('imagen'),get_sub_field('titulo'),get_sub_field('resumen'),get_sub_field('link_funccionalidades'),get_sub_field('link_contactos'));

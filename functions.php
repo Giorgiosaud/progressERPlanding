@@ -18,7 +18,8 @@ function enqueueScriptsAndStyles(){
 	$vars=array(
 		'mapa'=>get_field('direccion_google_maps', 'option'),
 		'ajaxurl'=>admin_url( 'admin-ajax.php' ),
-		'redirect'=>get_field('redirect','option')
+		'redirect'=>get_field('redirect','option'),
+		'redirectDemo'=>get_field('redirect_after_demo_req','option')
 	);
 	wp_enqueue_script('googleMap','https://maps.googleapis.com/maps/api/js?key=AIzaSyByDsDQWBV5XMBpz2wWHu6RqhFBNtL_70o&callback=initMap',array('mainJs','recaptchajs'),null,true);
 
@@ -36,6 +37,20 @@ function custom_theme_setup() {
 	
 
 }
+add_filter('acf/settings/save_json', function() {
+	return get_template_directory() . '/fields';
+});
+
+add_filter('acf/settings/load_json', function($paths) {
+	$paths = array(get_template_directory() . '/fields');
+
+	if(is_child_theme())
+	{
+		$paths[] = get_stylesheet_directory() . '/fields';
+	}
+
+	return $paths;
+});
 add_action( 'after_setup_theme', 'custom_theme_setup' );
 if( function_exists('acf_add_options_page') ) {
 	

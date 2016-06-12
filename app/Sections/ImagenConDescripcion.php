@@ -4,15 +4,17 @@ class ImagenConDescripcion{
 	private $imagen;
 	private $titulo;
 	private $resumen;
-	public function __construct($imagen,$titulo,$resumen)
+	private $id;
+	public function __construct($id,$imagen,$titulo,$resumen)
 	{
 		$this->imagen=$imagen;
 		$this->titulo=$titulo;
 		$this->resumen=$resumen;
+		$this->id=$id;
 	}
 	public function show(){
 		ob_start();?>
-		<section class="Calidad container">
+		<section class="Calidad container" id="<?= $this->id?>">
 			<div class="Calidad__imagen">
 				<img src="<?=$this->imagen?>" alt="">
 			</div>
