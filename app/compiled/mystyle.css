@@ -1343,6 +1343,14 @@ section.SolicitarDemo {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .CaracteristicasLanding__Caracteristica {
+    -ms-flex-preferred-size: calc(50% - 4em);
+    flex-basis: calc(50% - 4em);
+  }
+  .ClientesLanding__Cliente {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+  }
 }
 @media (max-width: 640px) {
   section.SolicitarDemo {
@@ -1367,6 +1375,14 @@ section.SolicitarDemo {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+  .CaracteristicasLanding__Caracteristica {
+    -ms-flex-preferred-size: calc(100% - 4em);
+    flex-basis: calc(100% - 4em);
+  }
+  .ClientesLanding__Cliente {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
   }
   footer .container {
     margin: 0;
