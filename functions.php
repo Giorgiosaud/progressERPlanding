@@ -124,7 +124,6 @@ if(!function_exists('sendEmail')){
 	$telefono=$_POST['data']['telefono'];
 	$email=$_POST['data']['email'];
 	$producto=$_POST['data']['producto'];
-	$mensaje=$_POST['data']['mensaje'];
 	if ($nombre === '') { 
 		header('HTTP/1.1 401 Unauthorized', true, 401);
 		$respuesta = 'Ingrese Su Nombre';
@@ -246,12 +245,6 @@ if(!function_exists('requestDemo')){
 		echo $respuesta;
 		die();
 	}
-	if ($mensaje === '') { 
-		header('HTTP/1.1 401 Unauthorized', true, 401);
-		$respuesta = 'Ingrese Su Mensaje';
-		echo $respuesta;
-		die();
-	}
 	$data=compact('secret','response');
 	// var_dump($data);
 	$options = array(
@@ -270,9 +263,9 @@ if(!function_exists('requestDemo')){
 		echo $respuesta;
 		die();
 	}
-	$subject="{$nombre} les Contacta desde la Web";
+	$subject="{$nombre} Solicita un Demo";
 	$mensajeEmail = '<html><body>';
-	$mensajeEmail.="<p><b>La persona de nombre:</b>{$nombre} {$apellido}</p><p><b>Empresa:</b>{$empresa} de tamano {$tamano}</p><p><b>telefono:</b>{$telefono}</p><p><b>email:</b><a href='mailto:{$email}'>{$email}</a></p><p><b>dejo este mensaje en la web:</b></p><p> {$mensaje}</p><p>refiriendose al producto{$producto}</p> ";
+	$mensajeEmail.="<p><b>La persona de nombre:</b>{$nombre} {$apellido}</p><p><b>Empresa:</b>{$empresa} de tamano {$tamano}</p><p><b>telefono:</b>{$telefono}</p><p><b>email:</b><a href='mailto:{$email}'>{$email}</a></p>";
 	$mensajeEmail.='</body></html>';
 	$headers = "From: " . strip_tags($email) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($email) . "\r\n";

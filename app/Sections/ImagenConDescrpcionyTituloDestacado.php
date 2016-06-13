@@ -25,13 +25,13 @@ class ImagenConDescrpcionyTituloDestacado{
 		</section>
 		<section class="ImagenyContenidoDestacado container">
 			<div class="ImagenyContenidoDestacado__imagen">
-				<img src="<?=$this->imagen?>" alt="">
+				<img src="<?=$this->imagen?>" alt="Imagen Destacada" class="img-responsive">
 			</div>
 			<div class="ImagenyContenidoDestacado__Contenido">
 				<div class="ImagenyContenidoDestacado__Descripcion">
 					<p><?=$this->resumen?></p>
 				</div>
-			</div>
+ 			</div>
 		</section>
 <?php
 		echo ob_get_clean();

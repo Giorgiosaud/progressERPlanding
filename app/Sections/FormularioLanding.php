@@ -78,9 +78,6 @@ class FormularioLanding{
 									</select>
 								</div>
 								<div class="formField">
-									<textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="* Mensaje" required></textarea>
-								</div>
-								<div class="formField">
 									<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdtTyETAAAAAMWdzaftef7b6LKST4YMQAiuqiNF"></div>
 								</div>
 								<button id="enviarFormularioLanding" type="submit" class="btn botonCotizacion" disabled>Solicitar mi Cotización</button>
