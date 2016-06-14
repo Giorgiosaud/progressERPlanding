@@ -53,10 +53,7 @@ class FormularioLanding{
 						<div class="FormilarioLanding__Formulario__Fields">
 							<form id="landingForm" action="">
 								<div class="formField">
-									<input type="text" name="nombre" placeholder="* Nombre" required>
-								</div>
-								<div class="formField">
-									<input type="text" name="apellido" placeholder="* Apellido" required>
+									<input type="text" name="nombre" placeholder="* Nombre y Apellido" required>
 								</div>
 								<div class="formField">
 									<input type="email" name="email" placeholder="* Email" required>
@@ -69,7 +66,7 @@ class FormularioLanding{
 								</div>
 								<div class="formField">
 									<select name="tamano" required>
-										<option value="">¿De que tanaño es su Empresa?</option>
+										<option value="">¿De que tamaño es su Empresa?</option>
 										<option value="1-20">1-20 empleados</option>
 										<option value="21-60">21-60 empleados</option>
 										<option value="61-100">61-100 empleados</option>
@@ -78,9 +75,9 @@ class FormularioLanding{
 									</select>
 								</div>
 								<div class="formField">
-									<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdtTyETAAAAAMWdzaftef7b6LKST4YMQAiuqiNF"></div>
+								<textarea name="mensaje" rows="3" placeholder="Cuéntenos que necesita"></textarea>
 								</div>
-								<button id="enviarFormularioLanding" type="submit" class="btn botonCotizacion" disabled>Solicitar mi Cotización</button>
+								<button id="enviarFormularioLanding" type="submit" class="btn botonCotizacion" >Solicitar mi Cotización</button>
 								<div class="LandingFormmensaje">
 									<p>Privacidad 100% garantizada.</p>
 									<p>Nunca Compartiremos sus datos</p>

@@ -1121,7 +1121,7 @@ section.Copyleft {
   content: '';
   position: absolute;
   width: 70%;
-  border-bottom: solid #f00 2px;
+  border-bottom: solid #008000 2px;
   bottom: 0;
 }
 .FormilarioLanding__Formulario__Titulo {
@@ -1132,8 +1132,8 @@ section.Copyleft {
   font-size: 1.2em;
 }
 .FormilarioLanding__Formulario__Fields {
-  padding: 2em 1em;
-  color: #fff;
+  padding: 2em 1em 0em 1em;
+  color: #000;
   text-align: center;
 }
 .FormilarioLanding__Formulario__Fields .formField {
@@ -1144,28 +1144,23 @@ section.Copyleft {
 }
 .LandingFormmensaje {
   padding: 2em 0;
+  color: #fff;
 }
 .botonCotizacion {
-  box-shadow: 0px 0px 0px 2px #9fb4f2;
-  background: -webkit-linear-gradient(top, #7892c2 5%, #0c5480 100%);
-  background: linear-gradient(to bottom, #7892c2 5%, #0c5480 100%);
-  background-color: #7892c2;
+  background-color: #008000;
   border-radius: 10px;
-  border: 1px solid #0c5480;
+  border: 1px solid #008000;
   display: inline-block;
   cursor: pointer;
   color: #fff;
-  font-family: Arial;
   font-size: 19px;
   padding: 12px 37px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #0c5480;
+  text-shadow: 0px 1px 0px #008000;
 }
 .botonCotizacion:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0c5480), color-stop(1, #7892c2));
-  background: -webkit-linear-gradient(top, #0c5480 5%, #7892c2 100%);
-  background: linear-gradient(to bottom, #0c5480 5%, #7892c2 100%);
-  background-color: #0c5480;
+  background-color: #00e600;
+  color: #fff;
 }
 .botonCotizacion:active {
   position: relative;
