@@ -1383,4 +1383,10 @@ section.SolicitarDemo {
     margin: 0;
     padding: 0;
   }
+  .TituloDestacado {
+    padding: 2em;
+  }
+  .TituloDestacado__Titulo {
+    font-size: 2rem;
+  }
 }
